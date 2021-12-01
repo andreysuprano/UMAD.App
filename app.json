@@ -1,0 +1,12 @@
+{
+  "name": "UMADApp",
+  "displayName": "UMADApp",
+  "expo": {
+    "name": "UMADApp",
+    "slug": "UMADApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
