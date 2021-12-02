@@ -1,6 +1,7 @@
 import React from "react";
-import { View, StatusBar } from "react-native";
 import AppLoading from "expo-app-loading";
+import { StatusBar, View } from "react-native";
+
 import {
   useFonts,
   Montserrat_400Regular,
@@ -9,7 +10,7 @@ import {
   Montserrat_900Black,
 } from "@expo-google-fonts/montserrat";
 
-import SeuNome from './src/screens/Cadastro/SuaSenha';
+import Routes from "./src/routes/Routes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -23,14 +24,14 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <View>
-        <SeuNome/>
+      <>
         <StatusBar
           barStyle="dark-content"
           backgroundColor="transparent"
           translucent
         />
-      </View>
+        <Routes />
+      </>
     );
   }
 }

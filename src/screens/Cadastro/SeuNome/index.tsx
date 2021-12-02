@@ -8,10 +8,10 @@ import {
   KeyboardAvoidingView,
   ScrollView,
 } from "react-native";
-import Theme from "../../assets/styles/Theme";
+import Theme from "../../../assets/styles/Theme";
 
-import InputOnFocus from "../../components/InputOnFocus";
-import Button from "../../components/Button";
+import InputOnFocus from "../../../components/InputOnFocus";
+import Button from "../../../components/Button";
 
 export default function SeuNome() {
   return (
