@@ -11,6 +11,7 @@ import {
 } from "@expo-google-fonts/montserrat";
 
 import Routes from "./src/routes/Routes";
+import { AuthProvider } from "./src/context/auth";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -30,7 +31,9 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        <Routes />
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
       </>
     );
   }
