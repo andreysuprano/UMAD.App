@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet, FlatList } from "react-native";
 import Theme from "../../assets/styles/Theme";
+import { LinearGradient } from 'expo-linear-gradient';
 
 import produtos from '../../mocks/produtos';
 
@@ -8,17 +9,18 @@ import ListItemProdutos from '../../components/ListItemProdutos';
 export default function Home() {
   const [list, setList] = useState(produtos);
   return (
-    <View style={styles.container}>
+    <LinearGradient style={styles.container} colors={[Theme.primary, Theme.background]}>
       <View style={styles.titleContainer}>
         <Text style={styles.text}>UMAD Store</Text>
       </View>
       <FlatList
         data={list}
         style={styles.list}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <ListItemProdutos data={item} />}
         keyExtractor={(item, index) => index.toString()}
       />
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -29,7 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     paddingTop: "20%",
-    paddingBottom: "10%",
   },
   content: {
     alignItems: "center",
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "Montserrat_700Bold",
-    color:Theme.square,
+    color: Theme.square,
     fontSize: 36,
     fontWeight: "800",
   },
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     width: "90%",
   },
   list: {
-    marginTop:25,
+    marginTop: 25,
     width: "90%",
     height: "100%",
   },

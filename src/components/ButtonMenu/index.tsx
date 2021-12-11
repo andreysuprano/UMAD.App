@@ -5,12 +5,12 @@ import { FontAwesome5 } from "@expo/vector-icons";
 
 type ButtonMenuProps = {
   text: string;
-  iconName:string;
+  iconName: string;
 };
 export default function ButtonMenu({ text, iconName }: ButtonMenuProps) {
   return (
-    <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-        <FontAwesome5 name={iconName} size={50} color={Theme.primary} />
+    <TouchableOpacity style={styles.button} activeOpacity={0.5}>
+      <FontAwesome5 name={iconName} size={50} color={Theme.primary} />
       <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
@@ -25,11 +25,20 @@ const styles = StyleSheet.create({
     marginTop: "7%",
     alignItems: "center",
     justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.07,
+    shadowRadius: 4.65,
+
+    elevation: 6,
   },
   buttonText: {
     color: Theme.primary,
     fontFamily: "Montserrat_400Regular",
     fontSize: 16,
-    marginTop:10
+    marginTop: 10
   },
 });

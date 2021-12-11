@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   text: {
-    fontSize: 36,
+    fontFamily: 'Montserrat_800ExtraBold',
+    fontSize: 32,
     fontWeight: "800",
   },
   buttonContainer: {

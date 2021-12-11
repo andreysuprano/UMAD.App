@@ -15,45 +15,62 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={()=>({
-            tabBarActiveTintColor:Theme.primary,
-            tabBarInactiveTintColor:Theme.title,
-            tabBarLabelStyle:{
-                fontSize:12
-            },
-            tabBarStyle:{
-                height:'9%',
-                paddingTop:5,
-            },
-            headerShown:false,
-          
+        screenOptions={() => ({
+          tabBarActiveTintColor: Theme.primary,
+          tabBarInactiveTintColor: Theme.title,
+          tabBarLabelStyle: {
+            fontSize: 12
+          },
+          tabBarStyle: {
+            height: '10%',
+            paddingTop: 5,
+          },
+
         })}
       >
-        <Tab.Screen
-          name="Store"
-          component={Store}
-          options={() => ({
-            tabBarIcon: ({color}) => (
-                <FontAwesome5 name="store-alt" size={26} color={color} />
-            ),
-          })}
-        />
         <Tab.Screen
           name="Home"
           component={Home}
           options={() => ({
-            tabBarIcon: ({color}) => (
+            tabBarIcon: ({ color }) => (
               <FontAwesome5 name="home" size={26} color={color} />
             ),
+            headerShown: false,
+          })}
+        />
+        <Tab.Screen
+          name="Store"
+          component={Store}
+          options={() => ({
+            tabBarIcon: ({ color }) => (
+              <FontAwesome5 name="store-alt" size={26} color={color} />
+            ),
+            headerShown: false,
+          })}
+        />
+        <Tab.Screen
+          name="Bíblia"
+          component={Home}
+          options={() => ({
+            tabBarIcon: ({ color }) => (
+              <FontAwesome5 name="book" size={26} color={color} />
+            ),
+            headerShown: false,
           })}
         />
         <Tab.Screen
           name="Perfil"
           component={Menu}
           options={() => ({
-            tabBarIcon: ({color}) => (
+            tabBarIcon: ({ color }) => (
               <FontAwesome name="user" size={26} color={color} />
             ),
+            headerTintColor: Theme.title,
+            headerTitleStyle: {
+              fontFamily: 'Montserrat_800ExtraBold',
+              fontSize: 24
+            },
+            headerTitleAlign: "center"
           })}
         />
       </Tab.Navigator>

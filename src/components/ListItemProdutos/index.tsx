@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontFamily: "Montserrat_700Bold",
-    fontWeight:'700'
+    fontWeight: '700'
   },
   image: {
     width: "100%",
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal:10,
-    marginLeft:10
+    paddingHorizontal: 10,
+    marginLeft: 10
   },
   buttonText: {
     color: Theme.square,
