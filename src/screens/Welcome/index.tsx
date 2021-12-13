@@ -3,17 +3,26 @@ import { StyleSheet, Text, View, Image,TouchableOpacity, SafeAreaView  } from "r
 import Theme from "../../assets/styles/Theme";
 import Logo from "../../assets/images/logoLaranja.png";
 
-export default function App() {
+export default function App({navigation}: {navigation: any}) {
+  
+  const handleNewAccount = () => {
+    navigation.navigate('Cpf',{ screen: 'Cpf' });
+  }
+
+  const handlelogin = () => {
+    console.log('bbbb')
+}
+
   return (
     <SafeAreaView style={styles.container}>
       <Image source={Logo} style={styles.logo} />
       <Text style={styles.title}>Bem Vindo!</Text>
       <View style={styles.squareContainer}>
-        <TouchableOpacity style={styles.square} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.square} activeOpacity={0.7} onPress={handleNewAccount}>
           <Text style={styles.emoji}>😀</Text>
           <Text style={styles.squareText}>Criar Conta</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.square} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.square} activeOpacity={0.7} onPress={handlelogin}>
           <Text style={styles.emoji}>😉</Text>
           <Text style={styles.squareText}>Possuo conta</Text>
         </TouchableOpacity>

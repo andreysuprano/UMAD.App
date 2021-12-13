@@ -13,7 +13,13 @@ import Theme from "../../../assets/styles/Theme";
 import InputOnFocus from "../../../components/InputOnFocus";
 import Button from "../../../components/Button";
 
-export default function SeuCpf() {
+
+export default function SeuCpf({navigation}: {navigation: any}) {
+
+  const handleContinue = () =>{
+    navigation.navigate('Nome',{ screen: 'Nome' });
+  }
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView style={styles.container} behavior="height">
@@ -23,11 +29,11 @@ export default function SeuCpf() {
             <Text style={styles.paragraph}>O seu Cpf é o que te torna único, em caso de premiações ele identificará você!</Text>
           </View>
           <ScrollView>
-            <InputOnFocus placeholder="123.456.789-10"/>
+            <InputOnFocus placeholder="123.456.789-10" mask="cpf"/>
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>
-            <Button text="Continuar" />
+            <Button text="Continuar" onClick={handleContinue} />
         </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>

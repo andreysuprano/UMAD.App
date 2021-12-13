@@ -13,7 +13,12 @@ import Theme from "../../../assets/styles/Theme";
 import InputOnFocus from "../../../components/InputOnFocus";
 import Button from "../../../components/Button";
 
-export default function SeuTelefone() {
+export default function SeuTelefone({navigation}: {navigation: any}) {
+
+  const handleContinue = () =>{
+    navigation.navigate('Setor',{ screen: 'Setor' });
+  }
+  
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView style={styles.container} behavior="height">
@@ -27,7 +32,7 @@ export default function SeuTelefone() {
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>
-            <Button text="Continuar" />
+            <Button text="Continuar" onClick={handleContinue} />
         </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>

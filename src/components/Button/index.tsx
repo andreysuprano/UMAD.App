@@ -3,11 +3,16 @@ import { TouchableOpacity, StyleSheet, Text } from "react-native";
 import Theme from "../../assets/styles/Theme";
 
 type ButtonProps = {
-  text:string
+  text:string,
+  onClick:any
 }
-export default function Button({text}:ButtonProps) {
+export default function Button({text, onClick}:ButtonProps) {
+
+  const handleOnPress = () => {
+    onClick();
+  }
   return (
-    <TouchableOpacity style={styles.button} activeOpacity={0.7}>{<Text style={styles.buttonText}>{text}</Text>}</TouchableOpacity>
+    <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleOnPress}>{<Text style={styles.buttonText}>{text}</Text>}</TouchableOpacity>
   );
 }
 

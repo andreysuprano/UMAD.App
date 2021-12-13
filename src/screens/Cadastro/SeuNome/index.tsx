@@ -13,7 +13,10 @@ import Theme from "../../../assets/styles/Theme";
 import InputOnFocus from "../../../components/InputOnFocus";
 import Button from "../../../components/Button";
 
-export default function SeuNome() {
+export default function SeuNome({navigation}: {navigation: any}) {
+  const handleContinue = () =>{
+    navigation.navigate('Email',{ screen: 'Email' });
+  }
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView style={styles.container} behavior="height">
@@ -27,7 +30,7 @@ export default function SeuNome() {
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>
-            <Button text="Continuar" />
+            <Button text="Continuar" onClick={handleContinue}/>
         </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
