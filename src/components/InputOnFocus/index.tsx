@@ -4,6 +4,7 @@ import Theme from "../../assets/styles/Theme";
 
 type InputProps = {
   placeholder: string;
+  mask:string;
 };
 export default function InputOnFocus({ placeholder,...copy}: InputProps) {
   const [active, setActive] = useState(false);
@@ -12,6 +13,18 @@ export default function InputOnFocus({ placeholder,...copy}: InputProps) {
   }
   function handleBlur() {
     setActive(false);
+  }
+  
+  const mascaraCPF = (cpf:string) => {
+    cpf = cpf.replace(/\D/g, "");
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    
+    return cpf;
+  }
+  const handleMaskValue = () => {
+
   }
   return (
     <TextInput

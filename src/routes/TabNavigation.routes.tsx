@@ -8,6 +8,7 @@ import Home from "../screens/Home";
 import Menu from "../screens/Perfil";
 import Store from "../screens/Store";
 import Theme from "../assets/styles/Theme";
+import Welcome from "../screens/Welcome";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -49,7 +50,7 @@ export default function TabNavigation() {
         />
         <Screen
           name="Bíblia"
-          component={Home}
+          component={Welcome}
           options={() => ({
             tabBarIcon: ({ color }) => (
               <FontAwesome5 name="book" size={26} color={color} />
@@ -58,7 +59,7 @@ export default function TabNavigation() {
           })}
         />
         <Screen
-          name="Perfil"
+          name="Ranking"
           component={Menu}
           options={() => ({
             tabBarIcon: ({ color }) => (

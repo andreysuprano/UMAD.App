@@ -41,7 +41,7 @@ const USER_DEFAULT = {
 const UserContext = createContext<UserContextProps>(USER_DEFAULT);
 const SessionContext = createContext<SessionContextProps>(SESSION_DEFAULT);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({children}:{children:any}) => {
     const [user, setUser] = useState(USER_DEFAULT.user);
     const [session, setSession] = useState(SESSION_DEFAULT.session);
     return(
