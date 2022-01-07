@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import {
   StyleSheet,
   Text,
@@ -10,25 +10,33 @@ import {
 } from "react-native";
 import Theme from "../../../assets/styles/Theme";
 
-import InputOnFocus from "../../../components/InputOnFocus";
+import InputMasked from "../../../components/InputMasked";
 import Button from "../../../components/Button";
+import { Platform } from "react-native";
+import Context from "../../../context/auth";
+import { useContext } from "react";
 
 export default function SeuTelefone({navigation}: {navigation: any}) {
-
+  const { user, setUser } = useContext(Context.UserContext);
+  const [telefone, setTelefone] = useState('');
   const handleContinue = () =>{
-    navigation.navigate('Setor',{ screen: 'Setor' });
+    if (telefone !== "" && telefone.length >= 15) {
+      user.telefone = telefone;
+      setUser(user);
+      navigation.navigate('Setor',{ screen: 'Setor' });
+    }
   }
   
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <KeyboardAvoidingView style={styles.container} behavior="height">
+      <KeyboardAvoidingView style={styles.container} behavior="height" keyboardVerticalOffset={Platform.OS === "android"? -500 : 0}>
         <View style={styles.content}>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Seu Telefone 😀</Text>
             <Text style={styles.paragraph}>Precisamos do seu telefone para entrarmos em contato e deixa-lo informado sobre tudo!</Text>
           </View>
           <ScrollView>
-            <InputOnFocus placeholder="(41) 99999-9999"/>
+            <InputMasked placeholder="123.456.789-10" mascara="telefone" value={telefone} onChangeText={setTelefone} type="decimal-pad"/> 
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>

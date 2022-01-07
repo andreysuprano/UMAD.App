@@ -6093,6 +6093,11 @@ react-native-gesture-handler@~1.10.2:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-mask-input@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-mask-input/-/react-native-mask-input-1.1.1.tgz#a75c39e53885eb7f9d8f09da19afab5184c494ad"
+  integrity sha512-euvDIj5XX13IxPzujYtrrwG5qZOnsQDd2N71FwQ2Q7nkw9YkpsP/MObCZePgQlXGBLnhRphvUQE+0amAClQC4Q==
+
 react-native-reanimated@~2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.2.4.tgz#36c5d15028b0bd7d479fba5199117ac870c7a532"

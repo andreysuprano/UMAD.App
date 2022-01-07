@@ -23,7 +23,7 @@ type SessionContextProps = {
 const SESSION_DEFAULT = {
     session:{
         token:"",
-        auth:true
+        auth:false
     },
     setSession: () => {}
 };
