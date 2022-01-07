@@ -1,30 +1,17 @@
 import React, { useState } from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput, StyleSheet, TextInputProps } from "react-native";
 import Theme from "../../assets/styles/Theme";
 
 type InputProps = {
   placeholder: string;
-  mask:string;
 };
-export default function InputOnFocus({ placeholder,...copy}: InputProps) {
+export default function InputOnFocus({ placeholder,...copy}: InputProps & TextInputProps) {
   const [active, setActive] = useState(false);
   function handleFocus() {
     setActive(true);
   }
   function handleBlur() {
     setActive(false);
-  }
-  
-  const mascaraCPF = (cpf:string) => {
-    cpf = cpf.replace(/\D/g, "");
-    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-    
-    return cpf;
-  }
-  const handleMaskValue = () => {
-
   }
   return (
     <TextInput
@@ -45,5 +32,3 @@ export default function InputOnFocus({ placeholder,...copy}: InputProps) {
     />
   );
 }
-
-const styles = StyleSheet.create({});

@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import Theme from "../../../assets/styles/Theme";
 
-import InputOnFocus from "../../../components/InputOnFocus";
+import Input from "../../../components/Input";
 import Button from "../../../components/Button";
 
 export default function SuaSenha() {
@@ -23,12 +23,12 @@ export default function SuaSenha() {
             <Text style={styles.paragraph}>Escolha uma senha alfa-numérica usando caracteres maiúsculos e minusculos para garantir maior segurança!</Text>
           </View>
           <ScrollView>
-            <InputOnFocus placeholder="Senha"/>
-            <InputOnFocus placeholder="Repita a Senha"/>
+            <Input placeholder="Senha"/>
+            <Input placeholder="Repita a Senha"/>
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>
-            <Button text="Continuar" />
+            <Button text="Continuar" onClick />
         </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>

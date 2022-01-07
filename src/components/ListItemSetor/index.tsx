@@ -1,14 +1,26 @@
 import React from 'react';
+import { useState } from 'react';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native';
 
 import Theme from '../../assets/styles/Theme';
+import { useContext } from 'react';
+import Context from "../../context/auth";
 
-type listItemProps = {
-    data:any
-}
-const ListItem = ({ data }:listItemProps) => {
+
+const ListItem = ({data}:{data:any}, {navigation}:{navigation:any}) => {
+  const [setor, setSetor] = useState(-1);
+  const { user, setUser } = useContext(Context.UserContext);
+
+  const handlePressItem = (index:number) =>{
+    setSetor(index);
+    if(setor != -1){
+      user.setor = setor;
+      setUser(user);
+      navigation.navigate('Senha',{ screen: 'Senha' });
+    }
+  }
   return (
-    <TouchableOpacity activeOpacity={0.6} style={styles.item}>
+    <TouchableOpacity activeOpacity={0.6} style={styles.item} onPress={()=>{handlePressItem(data.id)}}>
       <View style={styles.itemInfo}>
         <Text style={styles.itemNumero}>{data.id}</Text>
         <View style={styles.descriptionContainer}>
