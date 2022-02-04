@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { useContext } from "react";
@@ -10,7 +10,7 @@ export default function Routes() {
   const { session } = useContext(Context.SessionContext);
   return (
     <NavigationContainer>
-      {session.auth ? <TabNavigation /> : <CadastroRoutes /> }
+        {session.auth ? <TabNavigation /> : <CadastroRoutes /> }
     </NavigationContainer>
   );
 }

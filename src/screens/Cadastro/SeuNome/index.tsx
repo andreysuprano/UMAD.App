@@ -52,7 +52,7 @@ export default function SeuNome({ navigation }: { navigation: any }) {
           </ScrollView>
         </View>
         <View style={styles.buttonContainer}>
-          <Button text="Continuar" onClick={handleContinue} />
+          <Button text="Continuar" onClick={handleContinue} isLoading={false}/>
         </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>

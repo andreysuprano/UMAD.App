@@ -5,7 +5,7 @@ export default [
     },
     {
         id:1,
-        igrejas:"Itaboa, Rivabem, Jardim Social, Itaboa, Rivabem, Jardim Social"
+        igrejas:"Itaboa, Rivabem, Jardim Social, Miqueleto, São Caetano"
     },
     {
         id:2,

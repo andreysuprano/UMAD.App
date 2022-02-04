@@ -5,7 +5,7 @@ import Theme from "../../assets/styles/Theme";
 type InputProps = {
   placeholder: string;
 };
-export default function InputOnFocus({ placeholder,...copy}: InputProps & TextInputProps) {
+export default function InputOnFocus({ placeholder, ...copy}: InputProps & TextInputProps) {
   const [active, setActive] = useState(false);
   function handleFocus() {
     setActive(true);

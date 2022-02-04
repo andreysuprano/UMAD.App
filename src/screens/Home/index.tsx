@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import Theme from "../../assets/styles/Theme";
 import ButtonMenu from "../../components/ButtonMenu";
 export default function Home() {
@@ -11,26 +11,25 @@ export default function Home() {
         </Text>
       </View>
       <View style={styles.content}>
-        <View style={styles.buttonContainer}>
+        <ScrollView horizontal={true} style={styles.scrollButtons} showsHorizontalScrollIndicator={false}>
+          <View style={styles.buttonContainer}>
           <ButtonMenu text="Agenda" iconName="calendar-check" />
-          <ButtonMenu text="Ranking" iconName="list-ol" />
-          <ButtonMenu text="Retiros" iconName="tree" />
-        </View>
-        <View style={styles.buttonContainer}>
-          <ButtonMenu text="Agenda" iconName="calendar-check" />
-          <ButtonMenu text="Ranking" iconName="list-ol" />
-          <ButtonMenu text="Retiros" iconName="tree" />
-        </View>
-        <View style={styles.buttonContainer}>
-          <ButtonMenu text="Agenda" iconName="calendar-check" />
-          <ButtonMenu text="Ranking" iconName="list-ol" />
-          <ButtonMenu text="Retiros" iconName="tree" />
-        </View>
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" /><ButtonMenu text="Agenda" iconName="calendar-check" />
+            <ButtonMenu text="Ranking" iconName="list-ol" />
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     height: "100%",
@@ -59,4 +58,16 @@ const styles = StyleSheet.create({
   titleContainer: {
     width: "90%",
   },
+  scrollButtons: {
+    width: '100%',
+    paddingLeft: 15,
+    paddingRight: 25,
+    marginTop: 15
+  },
+  labelContainer: {
+    alignItems: 'flex-start',
+  },
+  label: {
+    alignItems: 'flex-start',
+  }
 });

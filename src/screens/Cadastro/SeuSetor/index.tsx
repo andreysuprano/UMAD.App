@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -14,11 +14,19 @@ import ListItemSetor from "../../../components/ListItemSetor";
 
 import Theme from "../../../assets/styles/Theme";
 import setorList from "../../../utils/setorList";
+import Context from "../../../context/auth";
 
-export default function SeuSetor() {
+
+export default function SeuSetor({ navigation }: { navigation: any }) {
   const [list, setList] = useState(setorList);
+  const { user, setUser } = useContext(Context.UserContext);
+
+    // useEffect(()=>{
+    //   navigation.navigate("Senha",{screen:"Senha"})
+    // },[user])
+
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <TouchableWithoutFeedback>
       <KeyboardAvoidingView style={styles.container} behavior="height">
         <View style={styles.content}>
           <View style={styles.titleContainer}>

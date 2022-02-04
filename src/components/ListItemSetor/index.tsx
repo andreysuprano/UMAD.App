@@ -1,22 +1,24 @@
-import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native';
 
 import Theme from '../../assets/styles/Theme';
-import { useContext } from 'react';
 import Context from "../../context/auth";
 
 
-const ListItem = ({data}:{data:any}, {navigation}:{navigation:any}) => {
+const ListItem = ({data}:{data:any}) => {
   const [setor, setSetor] = useState(-1);
   const { user, setUser } = useContext(Context.UserContext);
+  const navigation = useNavigation();
 
   const handlePressItem = (index:number) =>{
     setSetor(index);
     if(setor != -1){
       user.setor = setor;
       setUser(user);
-      navigation.navigate('Senha',{ screen: 'Senha' });
+      navigation.navigate("Senha")
+      console.log(user)
     }
   }
   return (

@@ -22,92 +22,13 @@ export default function Perfil() {
               <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
               <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
             </View>
-          </View>
-
+          </View> 
           <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
+            <Text>Meus Dados</Text>
           </View>
-
           <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
+            <Text>Meus Dados</Text>
           </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-
-          <View style={styles.personContainer}>
-            <View style={styles.avatarContainer}>
-              <Image style={styles.avatar} source={Avatar} />
-            </View>
-            <View style={styles.textPersonContainer}>
-              <Text style={styles.nomeUsuario}>Andrey Suprano</Text>
-              <Text style={styles.pontosValor}>200<Text style={styles.pontosLabel}> Pontos</Text></Text>
-            </View>
-          </View>
-          
-          <View style={styles.personContainer}>
-            
-          </View>
-
         </View>
       </View>
     </ScrollView >

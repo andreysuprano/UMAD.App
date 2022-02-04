@@ -1,5 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -10,6 +9,8 @@ import Store from "../screens/Store";
 import Theme from "../assets/styles/Theme";
 import Welcome from "../screens/Welcome";
 
+import { Platform } from "react-native";
+
 const {Navigator, Screen} = createBottomTabNavigator();
 
 export default function TabNavigation() {
@@ -19,13 +20,16 @@ export default function TabNavigation() {
           tabBarActiveTintColor: Theme.primary,
           tabBarInactiveTintColor: Theme.title,
           tabBarLabelStyle: {
-            fontSize: 12
+            fontSize: 12,
+            marginBottom:Platform.OS === "ios" ? 0 : 15,
           },
           tabBarStyle: {
             height: '10%',
             paddingTop: 5,
           },
-
+          tabBarIconStyle:{
+            marginBottom:Platform.OS === "ios" ? 0 : -12,
+          }
         })}
       >
         <Screen
@@ -59,7 +63,7 @@ export default function TabNavigation() {
           })}
         />
         <Screen
-          name="Ranking"
+          name="Perfil"
           component={Menu}
           options={() => ({
             tabBarIcon: ({ color }) => (
